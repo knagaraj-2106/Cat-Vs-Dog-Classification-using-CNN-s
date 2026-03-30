@@ -117,7 +117,7 @@ dog-vs-cat-classification
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/dog-vs-cat-classification.git
+git clone https://github.com/knagaraj-2106/Cat-Vs-Dog-Classification-using-CNN-s
 ```
 
 2. Navigate to the project folder:
