@@ -1,143 +1,165 @@
-🐶🐱 Dog vs Cat Image Classification using Deep Learning
+# 🐶🐱 Dog vs Cat Image Classification using Deep Learning
 
-📌 Project Overview
+## 📌 Project Overview
 
-This project builds a Deep Learning image classification model to distinguish between cats and dogs using a pretrained convolutional neural network (CNN).
+This project implements a **Deep Learning-based image classification system** to distinguish between **dogs and cats** using a **pretrained convolutional neural network (CNN)**. It demonstrates a complete pipeline from **data preprocessing to model prediction** using transfer learning.
 
-The model leverages transfer learning to achieve high accuracy with reduced training time and computational cost.
+---
 
-🎯 Objective
+## 🎯 Objective
 
-Classify images as:
+* Classify images into:
 
-🐱 Cat
+  * 🐱 Cat
+  * 🐶 Dog
+* Leverage pretrained models to improve accuracy and reduce training time
+* Build a scalable and efficient prediction system
 
-🐶 Dog
+---
 
-Use pretrained architecture for efficient learning
+## 🧠 Model Architecture
 
-Build an end-to-end pipeline from preprocessing to prediction
+* Pretrained CNN (Transfer Learning)
+* Frozen base layers for feature extraction
+* Custom Dense layer for classification
+* Softmax activation for final output
 
-🧠 Model Architecture
+---
 
-Pretrained CNN (Transfer Learning)
+## ⚙️ Workflow
 
-Fully Connected Dense Layer for classification
+```text
+Image Input
+↓
+Preprocessing (Resize + Normalize)
+↓
+Feature Extraction (Pretrained Model)
+↓
+Classification Layer
+↓
+Prediction (Cat / Dog)
+```
 
-Softmax activation for output
+---
 
-⚙️ Steps Performed
+## ⚙️ Steps Performed
 
-🔹 Data Preprocessing
+### 🔹 Data Preprocessing
 
-Loaded image dataset
+* Loaded image dataset
+* Resized images to **224x224**
+* Normalized pixel values (0–1 scaling)
+* Converted images into NumPy arrays
 
-Resized images to 224x224
+---
 
-Normalized pixel values (0–1 scaling)
+### 🔹 Model Building
 
-Converted images into NumPy arrays
+* Used pretrained model for feature extraction
+* Froze base layers to retain learned features
+* Added custom Dense layer for classification
 
-🔹 Model Building
+---
 
-Used pretrained model from TensorFlow
+### 🔹 Model Training
 
-Frozen base layers to retain learned features
+* Split dataset into training and validation sets
+* Trained model using labeled data
+* Optimized performance using suitable loss and optimizer
 
-Added custom classification layer
+---
 
-🔹 Training
+### 🔹 Model Evaluation
 
-Split dataset into:
+* Evaluated model using accuracy metrics
+* Tested model performance on unseen data
 
-Training set
+---
 
-Validation set
+### 🔹 Prediction System
 
-Trained model on labeled images
+* Takes image path as input
+* Outputs:
 
-Used categorical loss and optimizer
+  * Cat 🐱
+  * Dog 🐶
 
-🔹 Evaluation
+---
 
-Evaluated model performance on test data
+## 🛠️ Technologies Used
 
-Measured accuracy and prediction performance
+* Python
+* TensorFlow / Keras
+* NumPy
+* OpenCV
+* Matplotlib
 
-🔹 Prediction System
+---
 
-Input: Image path
+## 📂 Project Structure
 
-Output:
-
-“Cat” or “Dog”
-
-🛠️ Technologies Used
-
-Python
-
-TensorFlow / Keras
-
-NumPy
-
-OpenCV
-
-Matplotlib
-
-📂 Project Structure
-
+```text
 dog-vs-cat-classification
 │
 ├── dataset/
 ├── model/
-│   └── model.h5 / model.pkl
+│   └── model.h5
 ├── notebook/
 │   └── Dog_vs_Cat_Classification.ipynb
 ├── README.md
 └── requirements.txt
+```
 
-🚀 How to Run the Project
+---
 
-Clone the repository:
+## 🚀 How to Run the Project
 
+1. Clone the repository:
+
+```bash
 git clone https://github.com/your-username/dog-vs-cat-classification.git
+```
 
-Navigate to the folder:
+2. Navigate to the project folder:
 
+```bash
 cd dog-vs-cat-classification
+```
 
-Install dependencies:
+3. Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
-Run the notebook:
+4. Run the notebook:
 
+```bash
 jupyter notebook
+```
 
-🧪 Predict on Custom Image
+---
 
-Provide image path when prompted
+## 🧪 Run Prediction
 
-Model predicts:
+* Provide the path of an image when prompted
+* Model will classify the image as **Cat or Dog**
 
-Cat 🐱
+---
 
-Dog 🐶
+## 📊 Results
 
-📊 Results
+* Achieved strong classification accuracy using transfer learning
+* Efficient training with reduced computation time
+* Robust performance on unseen images
 
-Achieved strong classification accuracy using transfer learning
+---
 
-Reduced training time significantly using pretrained weights
+## 📌 Future Improvements
 
-Built a scalable image classification pipeline
+* Apply data augmentation to improve generalization
+* Experiment with advanced architectures (ResNet, EfficientNet)
+* Deploy model using API (FastAPI)
+* Build a web interface for user interaction
 
-📌 Future Improvements
 
-Add data augmentation for better generalization
-
-Use advanced architectures (ResNet, EfficientNet)
-
-Deploy using API (FastAPI)
-
-Build UI for real-time predictions
